@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<script src="bower_components/angular/angular.js"></script>
+	<script type="text/javascript">
+		var appModule = angular.module('app',[]);
+
+		appModule.controller('divController', function() {
+			this.myName = 'lelin';
+			this.myFavoriteLanguage = 'JavaScript';
+			this.myFavoriteJSLibrary = 'Angular';
+		});
+	</script>
+	<title></title>
+</head>
+<body>
+	<div ng-controller="divController as divCtrl">
+		<h1>{{divCtrl.myName}}</h1>
+		<h1>{{divCtrl.myFavoriteLanguage}}</h1>
+		<h1>{{divCtrl.myFavoriteJSLibrary}}</h1>
+	</div>
+</body>
+</html>
